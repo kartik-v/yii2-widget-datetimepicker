@@ -2,7 +2,7 @@
     "name": "kartik-v/yii2-widget-datetimepicker",
     "description": "Enhanced Yii2 wrapper for the bootstrap datetimepicker plugin (sub repo split from yii2-widgets).",
     "keywords": ["yii2", "extension", "widget", "select2", "form", "datetime", "picker", "jquery", "plugin"],
-    "homepage": "https://github.com/kartik-v/yii2-widget-datepicker",
+    "homepage": "https://github.com/kartik-v/yii2-widget-datetimepicker",
     "type": "yii2-extension",
     "license": "BSD 3-Clause",
     "authors": [
