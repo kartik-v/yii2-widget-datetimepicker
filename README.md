@@ -39,7 +39,7 @@ You can refer detailed [documentation and demos](http://demos.krajee.com/widget-
 ### Usage
 
 ```php
-use kartik\datetimepicker\DateTimePicker;
+use kartik\datetime\DateTimePicker;
 
 echo '<label>Start Date/Time</label>';
 echo DateTimePicker::widget([

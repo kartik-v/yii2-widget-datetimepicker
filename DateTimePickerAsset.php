@@ -7,7 +7,7 @@
  * @version 1.0.0
  */
 
-namespace kartik\datetimepicker;
+namespace kartik\datetime;
 
 /**
  * Asset bundle for DateTimePicker Widget

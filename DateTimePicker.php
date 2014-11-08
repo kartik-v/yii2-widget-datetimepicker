@@ -7,7 +7,7 @@
  * @version 1.0.0
  */
 
-namespace kartik\datetimepicker;
+namespace kartik\datetime;
 
 use Yii;
 use yii\helpers\Html;
