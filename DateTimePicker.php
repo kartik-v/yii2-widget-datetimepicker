@@ -4,7 +4,7 @@
  * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014
  * @package yii2-widgets
  * @subpackage yii2-widget-datetimepicker
- * @version 1.0.0
+ * @version 1.1.0
  */
 
 namespace kartik\datetime;
@@ -88,7 +88,7 @@ class DateTimePicker extends \kartik\base\InputWidget
         if ($this->type < 1 || $this->type > 4 || !is_int($this->type)) {
             throw new InvalidConfigException("Invalid value for the property 'type'. Must be an integer between 1 and 4.");
         }
-        $this->initLanguage();
+        $this->setLanguage('bootstrap-datetimepicker.');
         $this->parseDateFormat('datetime');
         $this->_id = ($this->type == self::TYPE_INPUT) ? 'jQuery("#' . $this->options['id'] . '")' : 'jQuery("#' . $this->options['id'] . '").parent()';
         $this->registerAssets();
@@ -185,8 +185,8 @@ class DateTimePicker extends \kartik\base\InputWidget
     public function registerAssets()
     {
         $view = $this->getView();
-        if (!empty($this->pluginOptions['language'])) {
-            DateTimePickerAsset::register($view)->js[] = 'js/locales/bootstrap-datetimepicker.' . $this->pluginOptions['language'] . '.js';
+        if (!empty($this->_langFile)) {
+            DateTimePickerAsset::register($view)->js[] = $this->_langFile;
         } else {
             DateTimePickerAsset::register($view);
         }
