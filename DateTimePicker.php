@@ -88,7 +88,7 @@ class DateTimePicker extends \kartik\base\InputWidget
         if ($this->type < 1 || $this->type > 4 || !is_int($this->type)) {
             throw new InvalidConfigException("Invalid value for the property 'type'. Must be an integer between 1 and 4.");
         }
-        $this->setLanguage('bootstrap-datetimepicker.', __DIR__ . '/assets');
+        $this->setLanguage('bootstrap-datetimepicker.', __DIR__ . '/assets/');
         $this->parseDateFormat('datetime');
         $this->_id = ($this->type == self::TYPE_INPUT) ? 'jQuery("#' . $this->options['id'] . '")' : 'jQuery("#' . $this->options['id'] . '").parent()';
         $this->registerAssets();

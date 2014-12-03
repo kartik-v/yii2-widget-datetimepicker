@@ -1,3 +1,10 @@
+version 1.2.0
+=============
+**Date:** 03-Dec-2014
+
+- (bug #2): Ensure DateTimePicker minified javascript is of correct version
+- (bug #3): Fix setLanguage asset locales registration.
+
 version 1.1.0
 =============
 **Date:** 29-Nov-2014
