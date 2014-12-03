@@ -24,10 +24,13 @@ use yii\base\InvalidConfigException;
  */
 class DateTimePicker extends \kartik\base\InputWidget
 {
+    const CALENDAR_ICON = '<i class="glyphicon glyphicon-calendar"></i>';
+
     const TYPE_INPUT = 1;
     const TYPE_COMPONENT_PREPEND = 2;
     const TYPE_COMPONENT_APPEND = 3;
     const TYPE_INLINE = 4;
+    const TYPE_BUTTON = 5;
 
     /**
      * @var string the markup type of widget markup
@@ -40,6 +43,14 @@ class DateTimePicker extends \kartik\base\InputWidget
      * @var string The size of the input - 'lg', 'md', 'sm', 'xs'
      */
     public $size;
+    
+    /**
+     * @var array the HTML attributes for the button that is rendered for [[DateTimePicker::TYPE_BUTTON]].
+     * Defaults to `['class'=>'btn btn-default']`. The following special options are recognized:
+     * - 'label': string the button label. Defaults to `<i class="glyphicon glyphicon-calendar"></i>`
+     */
+    public $buttonOptions = [];
+    
     /**
      * @var array the HTML attributes for the input tag.
      */
@@ -85,8 +96,8 @@ class DateTimePicker extends \kartik\base\InputWidget
     public function init()
     {
         parent::init();
-        if ($this->type < 1 || $this->type > 4 || !is_int($this->type)) {
-            throw new InvalidConfigException("Invalid value for the property 'type'. Must be an integer between 1 and 4.");
+        if ($this->type < 1 || $this->type > 5 || !is_int($this->type)) {
+            throw new InvalidConfigException("Invalid value for the property 'type'. Must be an integer between 1 and 5.");
         }
         $this->setLanguage('bootstrap-datetimepicker.', __DIR__ . '/assets/');
         $this->parseDateFormat('datetime');
@@ -112,7 +123,8 @@ class DateTimePicker extends \kartik\base\InputWidget
         } else {
             Html::addCssClass($this->options, 'form-control');
         }
-        return $this->parseMarkup($this->getInput('textInput'));
+        $input = $this->type == self::TYPE_BUTTON ? 'hiddenInput' : 'textInput';
+        return $this->parseMarkup($this->getInput($input));
     }
 
     /**
@@ -154,9 +166,9 @@ class DateTimePicker extends \kartik\base\InputWidget
             if (isset($this->size)) {
                 Html::addCssClass($this->options, 'input-' . $this->size);
             }
-        } elseif (isset($this->size)) {
+        } elseif ($this->type != self::TYPE_BUTTON && isset($this->size)) {
             Html::addCssClass($this->_container, 'input-group input-group-' . $this->size);
-        } else {
+        } elseif ($this->type != self::TYPE_BUTTON) {
             Html::addCssClass($this->_container, 'input-group');
         }
         if ($this->type == self::TYPE_INPUT) {
@@ -171,6 +183,17 @@ class DateTimePicker extends \kartik\base\InputWidget
             Html::addCssClass($this->_container, 'date');
             $addon = $this->renderAddon($this->removeButton, 'remove') . $this->renderAddon($this->pickerButton);
             return Html::tag('div', $input . $addon, $this->_container);
+        }
+        if ($this->type == self::TYPE_BUTTON) {
+            Html::addCssClass($this->_container, 'date');
+            $label = ArrayHelper::remove($this->buttonOptions, 'label', self::CALENDAR_ICON);
+            $this->buttonOptions['type'] = 'button';
+            if (empty($this->buttonOptions['class'])) {
+                $this->buttonOptions['class'] = 'btn btn-default';
+            }
+            $button = Html::button($label, $this->buttonOptions);
+            Html::addCssStyle($this->_container, 'display:block');
+            return Html::tag('span', "{$input}{$button}", $this->_container);
         }
         if ($this->type == self::TYPE_INLINE) {
             $this->_id = $this->options['id'] . '-inline';
