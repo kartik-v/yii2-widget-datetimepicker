@@ -20,7 +20,7 @@ class DateTimePickerAsset extends \kartik\base\AssetBundle
     public function init()
     {
         $this->setSourcePath(__DIR__ . '/assets');
-        $this->setupAssets('css', ['css/bootstrap-datetimepicker']);
+        $this->setupAssets('css', ['css/bootstrap-datetimepicker', 'css/datetimepicker-kv']);
         $this->setupAssets('js', ['js/bootstrap-datetimepicker']);
         parent::init();
     }
