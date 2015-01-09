@@ -1,3 +1,9 @@
+version 1.3.0
+=============
+**Date:** 09-Jan-2015
+
+- (enh #9): Set i18N translation settings for 'kvdatetime' message category.
+
 version 1.2.0
 =============
 **Date:** 04-Dec-2014
