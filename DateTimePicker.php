@@ -57,11 +57,6 @@ class DateTimePicker extends \kartik\base\InputWidget
     public $options = [];
     
     /**
-     * @var array the the internalization configuration for this widget
-     */
-    public $i18n = [];
-    
-    /**
      * @var mixed the calendar/time picker button configuration.
      * - if this is passed as a string, it will be displayed as is (will not be HTML encoded).
      * - if this is set to false, the picker button will not be displayed.
@@ -100,6 +95,7 @@ class DateTimePicker extends \kartik\base\InputWidget
      */
     public function init()
     {
+        $this->_msgCat = 'kvdatetime';
         parent::init();
         if ($this->type < 1 || $this->type > 5 || !is_int($this->type)) {
             throw new InvalidConfigException("Invalid value for the property 'type'. Must be an integer between 1 and 5.");
@@ -209,22 +205,6 @@ class DateTimePicker extends \kartik\base\InputWidget
             $this->_container['id'] = $this->_id;
             return Html::tag('div', '', $this->_container) . $input;
         }
-    }
-
-    /**
-     * Initialize i18N settings for this widget
-     */
-    public function initI18N()
-    {
-        Yii::setAlias('@kvdatetime', dirname(__FILE__));
-        if (empty($this->i18n)) {
-            $this->i18n = [
-                'class' => 'yii\i18n\PhpMessageSource',
-                'basePath' => '@kvdatetime/messages',
-                'forceTranslation' => true
-            ];
-        }
-        Yii::$app->i18n->translations['kvdatetime'] = $this->i18n;
     }
     
     /**
