@@ -4,6 +4,7 @@ version 1.3.0
 
 - (enh #8): Create locale bootstrap-datetimepicker.tj.js 
 - (enh #9): Set i18N translation settings for 'kvdatetime' message category.
+- (enh #10): German translations added.
 - Code formatting updates as per Yii2 standards.
 - Revamp to use new Krajee base InputWidget and TranslationTrait.
 
