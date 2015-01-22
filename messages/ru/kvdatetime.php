@@ -17,6 +17,6 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    'Очистить поле' => '',
-    'Выбрать дату & время' => '',
+    'Clear field' => 'Очистить поле',
+    'Select date & time' => 'Выбрать дату и время',
 ];
