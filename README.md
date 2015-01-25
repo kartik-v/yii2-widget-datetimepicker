@@ -31,7 +31,7 @@ to the ```require``` section of your `composer.json` file.
 
 ## Latest Release
 
-> NOTE: The latest version of the module is v1.3.0 released on 12-Jan-2015. Refer the [CHANGE LOG](https://github.com/kartik-v/yii2-widget-datetimepicker/blob/master/CHANGE.md) for details.
+> NOTE: The latest version of the module is v1.4.0. Refer the [CHANGE LOG](https://github.com/kartik-v/yii2-widget-datetimepicker/blob/master/CHANGE.md) for details.
 
 ## Demo
 
