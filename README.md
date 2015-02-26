@@ -1,6 +1,12 @@
 yii2-widget-datetimepicker
 ==========================
 
+[![Latest Stable Version](https://poser.pugx.org/kartik-v/yii2-widget-datetimepicker/v/stable.svg)](https://packagist.org/packages/kartik-v/yii2-widget-datetimepicker)
+[![License](https://poser.pugx.org/kartik-v/yii2-widget-datetimepicker/license.svg)](https://packagist.org/packages/kartik-v/yii2-widget-datetimepicker)
+[![Total Downloads](https://poser.pugx.org/kartik-v/yii2-widget-datetimepicker/downloads.svg)](https://packagist.org/packages/kartik-v/yii2-widget-datetimepicker)
+[![Monthly Downloads](https://poser.pugx.org/kartik-v/yii2-widget-datetimepicker/d/monthly.png)](https://packagist.org/packages/kartik-v/yii2-widget-datetimepicker)
+[![Daily Downloads](https://poser.pugx.org/kartik-v/yii2-widget-datetimepicker/d/daily.png)](https://packagist.org/packages/kartik-v/yii2-widget-datetimepicker)
+
 The DateTimePicker widget is a Yii 2 wrapper for the [Bootstrap DateTimePicker plugin](http://www.malot.fr/bootstrap-datetimepicker) with various enhancements. The plugin is a fork of the DateTimePicker plugin by @eternicode and adds the time functionality. The widget is similar to the DateTimePicker widget in most aspects, except that it adds the time functionality and does not support ranges. The widget is specially styled for Yii framework 2.0 and Bootstrap 3 and allows graceful degradation to a normal HTML text input, if the browser does not support JQuery. The widget supports these markups:
 
 * Simple Input Markup
