@@ -100,7 +100,7 @@ class DateTimePicker extends \kartik\base\InputWidget
         if ($this->type < 1 || $this->type > 5 || !is_int($this->type)) {
             throw new InvalidConfigException("Invalid value for the property 'type'. Must be an integer between 1 and 5.");
         }
-        $this->initI18N();
+        $this->initI18N(__DIR__);
         $s = DIRECTORY_SEPARATOR;
         $this->setLanguage('bootstrap-datetimepicker.', __DIR__ . "{$s}assets{$s}");
         $this->parseDateFormat('datetime');
