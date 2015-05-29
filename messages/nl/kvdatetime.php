@@ -20,4 +20,3 @@ return [
     'Clear field' => 'Wis veld',
     'Select date & time' => 'Selecteer datum & tijd',
 ];
-
