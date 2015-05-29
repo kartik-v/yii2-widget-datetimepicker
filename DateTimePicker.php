@@ -100,9 +100,10 @@ class DateTimePicker extends \kartik\base\InputWidget
         if ($this->type < 1 || $this->type > 5 || !is_int($this->type)) {
             throw new InvalidConfigException("Invalid value for the property 'type'. Must be an integer between 1 and 5.");
         }
-        $this->initI18N(__DIR__);
+        $dir = Yii::getAlias('@vendor/kartik-v/yii2-widget-datetimepicker');
+        $this->initI18N($dir);
         $s = DIRECTORY_SEPARATOR;
-        $this->setLanguage('bootstrap-datetimepicker.', __DIR__ . "{$s}assets{$s}");
+        $this->setLanguage('bootstrap-datetimepicker.', "{$dir}{$s}assets{$s}");
         $this->parseDateFormat('datetime');
         $this->_id = ($this->type == self::TYPE_INPUT) ? 'jQuery("#' . $this->options['id'] . '")' : 'jQuery("#' . $this->options['id'] . '").parent()';
         $this->registerAssets();

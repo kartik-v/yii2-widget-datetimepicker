@@ -1,11 +1,13 @@
 version 1.4.1
 =============
-**Date:** 21-Apr-2015
+**Date:** 29-May-2015
 
 - (enh #14): Russian translations updated.
 - (enh #16): Improve validation to retrieve the right translation messages folder.
 - (bug #17): Remove BOM symbol in Russian translations.
 - (enh #18): Added Dutch Translations.
+- (enh #20): Added Ukranian Translations.
+- (enh #24): Added Chinese Translations.
 
 version 1.4.0
 =============
