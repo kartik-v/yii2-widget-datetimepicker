@@ -31,6 +31,7 @@ class DateTimePicker extends \kartik\base\InputWidget
     const TYPE_COMPONENT_APPEND = 3;
     const TYPE_INLINE = 4;
     const TYPE_BUTTON = 5;
+    const TYPE_COMPONENT_BOTH = 6;
 
     /**
      * @var string the markup type of widget markup
@@ -97,7 +98,7 @@ class DateTimePicker extends \kartik\base\InputWidget
     {
         $this->_msgCat = 'kvdatetime';
         parent::init();
-        if ($this->type < 1 || $this->type > 5 || !is_int($this->type)) {
+        if ($this->type < 1 || $this->type > 6 || !is_int($this->type)) {
             throw new InvalidConfigException("Invalid value for the property 'type'. Must be an integer between 1 and 5.");
         }
         $dir = Yii::getAlias('@vendor/kartik-v/yii2-widget-datetimepicker');
@@ -188,6 +189,12 @@ class DateTimePicker extends \kartik\base\InputWidget
             Html::addCssClass($this->_container, 'date');
             $addon = $this->renderAddon($this->removeButton, 'remove') . $this->renderAddon($this->pickerButton);
             return Html::tag('div', $input . $addon, $this->_container);
+        }
+        if ($this->type == self::TYPE_COMPONENT_BOTH) {
+            Html::addCssClass($this->_container, 'date');
+            $addonPrepend = $this->renderAddon($this->pickerButton);
+            $addonAppend = $this->renderAddon($this->removeButton, 'remove');
+            return Html::tag('div', $addonPrepend . $input . $addonAppend, $this->_container);
         }
         if ($this->type == self::TYPE_BUTTON) {
             Html::addCssClass($this->_container, 'date');
