@@ -1,6 +1,9 @@
-version 1.4.1
-=============
-**Date:** 29-May-2015
+Change Log: `yii2-widget-datetimepicker`
+========================================
+
+## Version 1.4.1
+
+**Date:** 13-Aug-2015
 
 - (enh #14): Russian translations updated.
 - (enh #16): Improve validation to retrieve the right translation messages folder.
@@ -8,15 +11,19 @@ version 1.4.1
 - (enh #18): Added Dutch Translations.
 - (enh #20): Added Ukranian Translations.
 - (enh #24): Added Chinese Translations.
+- (enh #30): Added Polish Translations.
+- (enh #32): Update to latest stable release of `bootstrap-datetimepicker` plugin.
+- (enh #33): Rename translations message category to `kvdtime`.
+- (enh #34): New property `layout` to control rendering of picker and remove buttons.
 
-version 1.4.0
-=============
+## Version 1.4.0
+
 **Date:** 25-Jan-2015
 
 - (bug #12): Fix directory separator for assets path in setLanguage.
 
-version 1.3.0
-=============
+## Version 1.3.0
+
 **Date:** 12-Jan-2015
 
 - (enh #8): Create locale bootstrap-datetimepicker.tj.js 
@@ -25,8 +32,8 @@ version 1.3.0
 - Code formatting updates as per Yii2 standards.
 - Revamp to use new Krajee base InputWidget and TranslationTrait.
 
-version 1.2.0
-=============
+## Version 1.2.0
+
 **Date:** 04-Dec-2014
 
 - (bug #2): Ensure DateTimePicker minified javascript is of correct version
@@ -35,15 +42,15 @@ version 1.2.0
 - (enh #5): Auto validate disability using new `disabled` and `readonly` properties in InputWidget
 - (enh #6): Include styling of markup rightly based on type for `disabled` and `readonly`
 
-version 1.1.0
-=============
+## Version 1.1.0
+
 **Date:** 29-Nov-2014
 
 - (enh #1): Enhance language locale file parsing and registering
 - Set release to stable
 
-version 1.0.0
-=============
+## Version 1.0.0
+
 
 **Date:** 08-Nov-2014
 
