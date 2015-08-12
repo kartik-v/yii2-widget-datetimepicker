@@ -60,12 +60,12 @@ class DateTimePicker extends InputWidget
     /**
      * @var string the layout template to display the buttons (applicable only  when `type` is one of
      * TYPE_COMPONENT_PREPEND or TYPE_COMPONENT_APPEND). The following tags will be parsed and replaced:
-     * - '{picker}': will be replaced with the date picker button (rendered as a bootstrap input group addon).
-     * - '{remove}': will be replaced with the date clear/remove button (rendered as a bootstrap input group addon).
-     * - '{input}': will be replaced with the HTML input markup that stores the datetime.
+     * - {picker}: will be replaced with the date picker button (rendered as a bootstrap input group addon).
+     * - {remove}: will be replaced with the date clear/remove button (rendered as a bootstrap input group addon).
+     * - {input}: will be replaced with the HTML input markup that stores the datetime.
      * The `layout` defaults to the following value if not set:
-     * - '{picker}{remove}{input}' for TYPE_COMPONENT_PREPEND
-     * - '{input}{remove}{picker}' for TYPE_COMPONENT_APPEND
+     * - {picker}{remove}{input} for TYPE_COMPONENT_PREPEND
+     * - {input}{remove}{picker} for TYPE_COMPONENT_APPEND
      */
     public $layout;
 
