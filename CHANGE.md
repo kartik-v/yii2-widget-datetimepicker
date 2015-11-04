@@ -3,7 +3,7 @@ Change Log: `yii2-widget-datetimepicker`
 
 ## Version 1.4.1
 
-**Date:** 13-Aug-2015
+**Date:** 05-Nov-2015
 
 - (enh #14): Russian translations updated.
 - (enh #16): Improve validation to retrieve the right translation messages folder.
@@ -15,6 +15,8 @@ Change Log: `yii2-widget-datetimepicker`
 - (enh #32): Update to latest stable release of `bootstrap-datetimepicker` plugin.
 - (enh #33): Rename translations message category to `kvdtime`.
 - (enh #34): New property `layout` to control rendering of picker and remove buttons.
+- (enh #36): Add 'meridiem' and 'sufix' properties to `UA` locale.
+- (enh #40): Add Spanish `ES` translations.
 
 ## Version 1.4.0
 
