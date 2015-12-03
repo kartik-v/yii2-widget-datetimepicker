@@ -18,5 +18,5 @@
  */
 return [
     'Clear field' => 'Törlés',
-    'Select date & time' => 'Válassz dűtumot és időt',
+    'Select date & time' => 'Válassz dátumot és időt',
 ];
