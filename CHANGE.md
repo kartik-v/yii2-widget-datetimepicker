@@ -1,6 +1,13 @@
 Change Log: `yii2-widget-datetimepicker`
 ========================================
 
+## Version 1.4.2
+
+**Date:** 03-Dec-2015
+
+- (enh #42): Add Traditional Chinese Translations.
+- (enh #43): Add Hungarian Translations.
+
 ## Version 1.4.1
 
 **Date:** 05-Nov-2015
