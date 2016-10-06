@@ -19,6 +19,6 @@
  * @author Vishal Bhalodiya <bhalodiyavishal46@gmail.com>
  */
 return [
-    'Clear field' => '',
-    'Select date & time' => '',
+    'Clear field' => 'ફીલ્ડ્ ખાલી કરો',
+    'Select date & time' => 'તારીખ અને સમય પસંદ કરો',
 ];
