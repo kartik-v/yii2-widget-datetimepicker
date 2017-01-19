@@ -3,9 +3,18 @@ Change Log: `yii2-widget-datetimepicker`
 
 ## Version 1.4.3
 
-**Date:** 09-Jul-2016
+**Date:** 19-Jan-2017
 
 - (enh #51): Update to latest release of the bootstrap-datetimepicker plugin.
+- (enh #54): Add Slovak Translations.
+- (enh #55): Add Czech Translations.
+- (enh #56): Add Thai Translations.
+- (enh #58): Add Portuguese Translations.
+- (enh #61): Add Japanese Translations.
+- (enh #62): Add French Translations.
+- (enh #65): Add Gujarati and Hindi Translations.
+- Add github contribution and issue/PR log templates.
+- Update message config to include all default standard translation files.
 
 ## Version 1.4.2
 
