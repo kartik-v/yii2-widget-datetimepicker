@@ -200,7 +200,7 @@ class DateTimePicker extends InputWidget
             case self::TYPE_COMPONENT_PREPEND:
             case self::TYPE_COMPONENT_APPEND:
                 $size = isset($this->size) ? "input-group-{$this->size} " : '';
-                Html::addCssClass($this->_container, "input-group {$size}date");
+                Html::addCssClass($this->_container, "input-group form-group {$size}date");
                 $out = strtr($this->layout, [
                     '{picker}' => $this->renderAddon($this->pickerButton),
                     '{remove}' => $this->renderAddon($this->removeButton, 'remove'),
