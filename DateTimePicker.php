@@ -4,7 +4,7 @@
  * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2017
  * @package yii2-widgets
  * @subpackage yii2-widget-datetimepicker
- * @version 1.4.3
+ * @version 1.4.4
  */
 
 namespace kartik\datetime;
@@ -50,14 +50,21 @@ class DateTimePicker extends InputWidget
      * Datetimepicker rendered as a button
      */
     const TYPE_BUTTON = 5;
+
     /**
      * @var string the markup type of widget markup must be one of the TYPE constants.
      */
     public $type = self::TYPE_COMPONENT_PREPEND;
+
     /**
      * @var string The size of the input - 'lg', 'md', 'sm', 'xs'
      */
     public $size;
+
+    /**
+     * @var boolean whether to auto default timezone if not set.
+     */
+    public $autoDefaultTimezone = true;
 
     /**
      * @var array the HTML attributes for the button that is rendered for [[DateTimePicker::TYPE_BUTTON]].
@@ -126,6 +133,9 @@ class DateTimePicker extends InputWidget
             throw new InvalidConfigException(
                 "Invalid value for the property 'type'. Must be an integer between 1 and 5."
             );
+        }
+        if ($this->autoDefaultTimezone && empty($this->pluginOptions['timezone']) && !empty(Yii::$app->timezone)) {
+            $this->pluginOptions['timezone'] = Yii::$app->timezone;
         }
         $dir = Yii::getAlias('@vendor/kartik-v/yii2-widget-datetimepicker');
         $this->initI18N($dir);

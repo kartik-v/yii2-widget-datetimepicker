@@ -1,4 +1,4 @@
-﻿/* =========================================================
+﻿﻿/* =========================================================
  * bootstrap-datetimepicker.js
  * =========================================================
  * Copyright 2012 Stefan Petre
@@ -9,6 +9,7 @@
  * Improvements by Kenneth Henderick
  * Improvements by CuGBabyBeaR
  * Improvements by Christian Vaas <auspex@auspex.eu>
+ * Improvements by Kartik Visweswaran, Krajee.com, 2017
  *
  * Project URL : http://www.malot.fr/bootstrap-datetimepicker
  *
@@ -72,6 +73,19 @@
     return UTCDate(today.getUTCFullYear(), today.getUTCMonth(), today.getUTCDate(), today.getUTCHours(), today.getUTCMinutes(), today.getUTCSeconds(), 0);
   }
 
+  // Added by Kartik 20-Mar-2017
+  var lPad = function (n) {
+    return n === '' ? '' : (n < 10 ? '0' + n : '' + n);
+  };
+  
+  // Added by Kartik 20-Mar-2017
+  var getTzName = function (d) {
+    var today = d || new Date(), offset = today.getTimezoneOffset(), o = Math.abs(offset), 
+        h = offset ? Math.floor(o / 60) : '', m = offset ? o % 60 : '',
+        tzPrefix = offset ? (offset > 0 ? 'GMT-' : 'GMT+') : 'GMT';
+    return tzPrefix + lPad(h) + lPad(m);
+  };
+  
   // Picker object
   var Datetimepicker = function (element, options) {
     var that = this;
@@ -109,7 +123,7 @@
     this.initialDate = options.initialDate || new Date();
     this.zIndex = options.zIndex || this.element.data('z-index') || undefined;
     this.title = typeof options.title === 'undefined' ? false : options.title;
-    this.defaultTimeZone = (new Date).toString().split('(')[1].slice(0, -1);
+    this.defaultTimeZone = getTzName();
     this.timezone = options.timezone || this.defaultTimeZone;
 
     this.icons = {
