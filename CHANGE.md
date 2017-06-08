@@ -1,10 +1,12 @@
 Change Log: `yii2-widget-datetimepicker`
 ========================================
 
-## Version 1.4.4 (_under development_)
+## Version 1.4.4
 
-**Date:** 19-Mar-2017
+**Date:** 08-Jun-2017
 
+- (enh #82, #81): Update German Translations.
+- (enh #78): Update Russian Translations.
 - (bug #70, #71): Rollback release of bootstrap-datetimepicker plugin.
 - (enh #66, #68, #72, #73, #74, #75): Timezone defaulting enhancements and bug fixes for datetimepicker.
 
@@ -12,14 +14,14 @@ Change Log: `yii2-widget-datetimepicker`
 
 **Date:** 19-Jan-2017
 
-- (enh #51): Update to latest release of the bootstrap-datetimepicker plugin.
-- (enh #54): Add Slovak Translations.
-- (enh #55): Add Czech Translations.
-- (enh #56): Add Thai Translations.
-- (enh #58): Add Portuguese Translations.
-- (enh #61): Add Japanese Translations.
-- (enh #62): Add French Translations.
 - (enh #65): Add Gujarati and Hindi Translations.
+- (enh #62): Add French Translations.
+- (enh #61): Add Japanese Translations.
+- (enh #58): Add Portuguese Translations.
+- (enh #56): Add Thai Translations.
+- (enh #55): Add Czech Translations.
+- (enh #54): Add Slovak Translations.
+- (enh #51): Update to latest release of the bootstrap-datetimepicker plugin.
 - Add github contribution and issue/PR log templates.
 - Update message config to include all default standard translation files.
 
@@ -27,29 +29,29 @@ Change Log: `yii2-widget-datetimepicker`
 
 **Date:** 10-Jan-2016
 
-- (enh #42): Add Traditional Chinese Translations.
-- (enh #43): Add Hungarian Translations.
-- (enh #47): Add Italian translations.
-- (enh #48): Add Swedish translations.
-- (enh #49): Correct Italian Translation file name.
 - (enh #50): Enhancements for PJAX based reinitialization. Complements enhancements in kartik-v/yii2-krajee-base#52 and kartik-v/yii2-krajee-base#53.
+- (enh #49): Correct Italian Translation file name.
+- (enh #48): Add Swedish translations.
+- (enh #47): Add Italian translations.
+- (enh #43): Add Hungarian Translations.
+- (enh #42): Add Traditional Chinese Translations.
 
 ## Version 1.4.1
 
 **Date:** 05-Nov-2015
 
-- (enh #14): Russian translations updated.
-- (enh #16): Improve validation to retrieve the right translation messages folder.
-- (bug #17): Remove BOM symbol in Russian translations.
-- (enh #18): Added Dutch Translations.
-- (enh #20): Added Ukranian Translations.
-- (enh #24): Added Chinese Translations.
-- (enh #30): Added Polish Translations.
-- (enh #32): Update to latest stable release of `bootstrap-datetimepicker` plugin.
-- (enh #33): Rename translations message category to `kvdtime`.
-- (enh #34): New property `layout` to control rendering of picker and remove buttons.
-- (enh #36): Add 'meridiem' and 'sufix' properties to `UA` locale.
 - (enh #40): Add Spanish `ES` translations.
+- (enh #36): Add 'meridiem' and 'sufix' properties to `UA` locale.
+- (enh #34): New property `layout` to control rendering of picker and remove buttons.
+- (enh #30): Added Polish Translations.
+- (enh #33): Rename translations message category to `kvdtime`.
+- (enh #32): Update to latest stable release of `bootstrap-datetimepicker` plugin.
+- (enh #24): Added Chinese Translations.
+- (enh #20): Added Ukranian Translations.
+- (enh #18): Added Dutch Translations.
+- (bug #17): Remove BOM symbol in Russian translations.
+- (enh #16): Improve validation to retrieve the right translation messages folder.
+- (enh #14): Russian translations updated.
 
 ## Version 1.4.0
 
@@ -61,28 +63,27 @@ Change Log: `yii2-widget-datetimepicker`
 
 **Date:** 12-Jan-2015
 
-- (enh #8): Create locale bootstrap-datetimepicker.tj.js 
-- (enh #9): Set i18N translation settings for 'kvdatetime' message category.
-- (enh #10): German translations added.
-- Code formatting updates as per Yii2 standards.
 - Revamp to use new Krajee base InputWidget and TranslationTrait.
+- Code formatting updates as per Yii2 standards.
+- (enh #10): German translations added.
+- (enh #9): Set i18N translation settings for 'kvdatetime' message category.
+- (enh #8): Create locale bootstrap-datetimepicker.tj.js 
 
 ## Version 1.2.0
 
 **Date:** 04-Dec-2014
 
-- (bug #2): Ensure DateTimePicker minified javascript is of correct version
-- (bug #3): Fix setLanguage asset locales registration.
-- (enh #4): Add a new markup TYPE_BUTTON with hidden input.
-- (enh #5): Auto validate disability using new `disabled` and `readonly` properties in InputWidget
 - (enh #6): Include styling of markup rightly based on type for `disabled` and `readonly`
+- (enh #5): Auto validate disability using new `disabled` and `readonly` properties in InputWidget
+- (enh #4): Add a new markup TYPE_BUTTON with hidden input.
+- (bug #3): Fix setLanguage asset locales registration.
+- (bug #2): Ensure DateTimePicker minified javascript is of correct version
 
 ## Version 1.1.0
 
 **Date:** 29-Nov-2014
 
 - (enh #1): Enhance language locale file parsing and registering
-- Set release to stable
 
 ## Version 1.0.0
 
