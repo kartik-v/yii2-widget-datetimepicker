@@ -17,6 +17,6 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    'Clear field' => '',
-    'Select date & time' => '',
+    'Clear field' => 'Alanı temizle',
+    'Select date & time' => 'Tarih & saat seç',
 ];
