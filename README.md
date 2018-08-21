@@ -1,7 +1,8 @@
 yii2-widget-datetimepicker
 ==========================
 
-[![Latest Stable Version](https://poser.pugx.org/kartik-v/yii2-widget-datetimepicker/v/stable)](https://packagist.org/packages/kartik-v/yii2-widget-datetimepicker)
+[![Stable Version](https://poser.pugx.org/kartik-v/yii2-widget-datetimepicker/v/stable)](https://packagist.org/packages/kartik-v/yii2-widget-datetimepicker)
+[![Untable Version](https://poser.pugx.org/kartik-v/yii2-widget-datetimepicker/v/unstable)](https://packagist.org/packages/kartik-v/yii2-widget-datetimepicker)
 [![License](https://poser.pugx.org/kartik-v/yii2-widget-datetimepicker/license)](https://packagist.org/packages/kartik-v/yii2-widget-datetimepicker)
 [![Total Downloads](https://poser.pugx.org/kartik-v/yii2-widget-datetimepicker/downloads)](https://packagist.org/packages/kartik-v/yii2-widget-datetimepicker)
 [![Monthly Downloads](https://poser.pugx.org/kartik-v/yii2-widget-datetimepicker/d/monthly)](https://packagist.org/packages/kartik-v/yii2-widget-datetimepicker)
@@ -35,9 +36,9 @@ or add
 
 to the ```require``` section of your `composer.json` file.
 
-## Latest Release
+## Release Changes
 
-> NOTE: The latest version of the module is v1.4.2. Refer the [CHANGE LOG](https://github.com/kartik-v/yii2-widget-datetimepicker/blob/master/CHANGE.md) for details.
+> NOTE: Refer the [CHANGE LOG](https://github.com/kartik-v/yii2-widget-datetimepicker/blob/master/CHANGE.md) for details on changes to various releases.
 
 ## Demo
 
