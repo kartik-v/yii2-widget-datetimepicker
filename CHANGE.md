@@ -1,6 +1,12 @@
 Change Log: `yii2-widget-datetimepicker`
 ========================================
 
+## Version 1.4.6
+
+**Date:** 25-Aug-2018
+
+- (bug #96): Correct JS language locale translations.
+
 ## Version 1.4.5
 
 **Date:** 22-Aug-2018

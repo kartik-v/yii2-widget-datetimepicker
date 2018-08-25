@@ -4,7 +4,7 @@
  * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2018
  * @package yii2-widgets
  * @subpackage yii2-widget-datetimepicker
- * @version 1.4.5
+ * @version 1.4.6
  */
 
 namespace kartik\datetime;
@@ -176,7 +176,7 @@ class DateTimePicker extends InputWidget
         $this->initIcon('remove', 'remove', 'times');
         $s = DIRECTORY_SEPARATOR;
         $this->initI18N(__DIR__);
-        $this->setLanguage('bootstrap-datetimepicker.', __DIR__ . "{$s}assets{$s}", null, '.min.js');
+        $this->setLanguage('bootstrap-datetimepicker.', __DIR__ . "{$s}assets{$s}", null, '.js');
         $this->parseDateFormat('datetime');
         if (empty($this->_container['id'])) {
             $this->_container['id'] = $this->options['id'] . '-datetime';
