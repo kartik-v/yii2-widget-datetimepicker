@@ -4,7 +4,7 @@
  * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2018
  * @package yii2-widgets
  * @subpackage yii2-widget-datetimepicker
- * @version 1.4.6
+ * @version 1.4.7
  */
 
 namespace kartik\datetime;
@@ -203,9 +203,9 @@ class DateTimePicker extends InputWidget
         }
         $view = $this->getView();
         if (!empty($this->_langFile)) {
-            DateTimePickerAsset::register($view)->js[] = $this->_langFile;
+            DateTimePickerAsset::registerBundle($view, $this->bsVersion)->js[] = $this->_langFile;
         } else {
-            DateTimePickerAsset::register($view);
+            DateTimePickerAsset::registerBundle($view, $this->bsVersion);
         }
         if ($this->type == self::TYPE_INLINE) {
             $this->pluginOptions['linkField'] = $this->options['id'];
