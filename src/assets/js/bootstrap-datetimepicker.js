@@ -99,7 +99,7 @@
 
         this.component = this.element.is('.date') ? (this.bootcssVer === 3 ? this.element.find(".kv-datetime-picker").parent() :
             this.element.find(".add-on .icon-th, .add-on .icon-time, .add-on .icon-calendar, .add-on .fa-calendar, .add-on .fa-clock-o").parent()) : false;
-        this.componentReset = this.element.is('.date') ? (this.bootcssVer === 3 ? this.element.find('.kv-datetime-remove').parent() : this.element.find('.add-on .icon-remove, .add-on .fa-times').parent()) : false;
+        this.componentReset = this.element.is('.date') ? (this.bootcssVer === 3 ? this.element.find('.kv-datetime-remove') : this.element.find('.add-on .icon-remove, .add-on .fa-times').parent()) : false;
         this.hasInput = this.component && this.element.find('input').length;
         if (this.component && this.component.length === 0) {
             this.component = false;
