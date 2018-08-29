@@ -159,6 +159,12 @@ class DateTimePicker extends InputWidget
             $this->pluginOptions['timezone'] = Yii::$app->getTimeZone();
         }
         $isBs4 = $this->isBs4();
+        if ($this->type == self::TYPE_INLINE) {
+            $this->pluginOptions['linkField'] = $this->options['id'];
+            if (!empty($this->pluginOptions['format'])) {
+                $this->pluginOptions['linkFormat'] = $this->pluginOptions['format'];
+            }
+        }
         $this->pluginOptions = array_replace_recursive([
             'icontype' => $isBs4 ? 'fas' : 'glyphicon',
             'fontAwesome' => $isBs4,
@@ -211,12 +217,6 @@ class DateTimePicker extends InputWidget
             DateTimePickerAsset::registerBundle($view, $this->bsVersion)->js[] = $this->_langFile;
         } else {
             DateTimePickerAsset::registerBundle($view, $this->bsVersion);
-        }
-        if ($this->type == self::TYPE_INLINE) {
-            $this->pluginOptions['linkField'] = $this->options['id'];
-            if (!empty($this->pluginOptions['format'])) {
-                $this->pluginOptions['linkFormat'] = $this->pluginOptions['format'];
-            }
         }
         if ($this->type == self::TYPE_INPUT) {
             $this->registerPlugin($this->pluginName);

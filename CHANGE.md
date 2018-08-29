@@ -3,7 +3,7 @@ Change Log: `yii2-widget-datetimepicker`
 
 ## Version 1.4.7
 
-**Date:** _under development_
+**Date:** 29-Aug-2018
 
 - (bug #97): Correct input clear/reset after click.
 - Correct Asset Bundle registration to validate `bsVersion`.
