@@ -113,11 +113,10 @@
         this.zIndex = options.zIndex || this.element.data('z-index') || undefined;
         this.title = typeof options.title === 'undefined' ? false : options.title;
         this.timezone = options.timezone || timeZoneAbbreviation();
-
-        this.icons = options.icons || {
+        this.icons = $.extend({
             leftArrow: this.fontAwesome ? 'fa-arrow-left' : (this.bootcssVer === 3 ? 'glyphicon-arrow-left' : 'icon-arrow-left'),
             rightArrow: this.fontAwesome ? 'fa-arrow-right' : (this.bootcssVer === 3 ? 'glyphicon-arrow-right' : 'icon-arrow-right')
-        };
+        }, (options.icons || {}));
         this.icontype = options.icontype || (this.fontAwesome ? 'fa' : 'glyphicon');
 
         this._attachEvents();

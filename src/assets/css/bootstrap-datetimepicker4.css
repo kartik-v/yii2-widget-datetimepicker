@@ -25,6 +25,10 @@
     float: right;
 }
 
+.datetimepicker-inline {
+    margin-top: 0.25rem;
+}
+
 .datepicker-dropdown {
     top: 0;
     left: 0;

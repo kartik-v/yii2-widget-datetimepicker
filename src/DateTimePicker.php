@@ -154,13 +154,18 @@ class DateTimePicker extends InputWidget
                 "Invalid value for the property 'type'. Must be an integer between 1 and 5."
             );
         }
+
         if ($this->autoDefaultTimezone && empty($this->pluginOptions['timezone']) && !empty(Yii::$app->getTimeZone())) {
             $this->pluginOptions['timezone'] = Yii::$app->getTimeZone();
         }
         $isBs4 = $this->isBs4();
         $this->pluginOptions = array_replace_recursive([
             'icontype' => $isBs4 ? 'fas' : 'glyphicon',
-            'fontAwesome' => $isBs4 ? true : false,
+            'fontAwesome' => $isBs4,
+            'icons' => [
+                'leftArrow' => $isBs4 ? 'fa-arrow-left' : 'glyphicon-arrow-left',
+                'rightArrow' => $isBs4 ? 'fa-arrow-right' : 'glyphicon-arrow-right',
+            ],
         ], $this->pluginOptions);
         $this->renderDateTimePicker();
     }
@@ -244,11 +249,11 @@ class DateTimePicker extends InputWidget
     protected function renderInput()
     {
         if ($this->type == self::TYPE_INLINE) {
-            if (empty($this->options['readonly'])) {
+            if (!isset($this->options['readonly'])) {
                 $this->options['readonly'] = true;
             }
-            if (empty($this->options['class'])) {
-                $this->options['class'] = 'form-control input-sm text-center';
+            if (!isset($this->options['class'])) {
+                $this->options['class'] = 'form-control text-center';
             }
         } else {
             Html::addCssClass($this->options, 'form-control');
