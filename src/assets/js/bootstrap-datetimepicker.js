@@ -3,6 +3,7 @@
  * =========================================================
  * Copyright 2012 Stefan Petre
  *
+ * Improvements by Kartik Visweswaran for Yii2 Functionality with Bootstrap 4.x support
  * Improvements by Andrew Rowls
  * Improvements by Sébastien Malot
  * Improvements by Yun Lai
@@ -23,8 +24,6 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- *
- * Modifications by Kartik Visweswaran for Bootstrap 4.x support
  *
  * ========================================================= */
 

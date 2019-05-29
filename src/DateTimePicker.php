@@ -283,7 +283,7 @@ class DateTimePicker extends InputWidget
     protected function renderButton(&$options, $type = 'picker', $addon = true)
     {
         $isPicker = $type === 'picker';
-        if ($options === false || (!$isPicker && $type !== 'remove')) {
+        if ($options === false) {
             return '';
         }
         if (is_string($options)) {
@@ -346,21 +346,21 @@ class DateTimePicker extends InputWidget
                 return Html::tag('div', $out, $this->_container);
             case self::TYPE_BUTTON:
                 Html::addCssClass($this->_container, ['date', $disabled]);
+                $pickerButton = $this->pickerButton;
                 if (!empty($this->buttonOptions)) { // buttonOptions is deprecated since v1.4.9
-                    $pickerButton = is_array($this->pickerButton) ? $this->pickerButton : [];
-                    $this->pickerButton = array_replace_recursive($pickerButton, $this->buttonOptions);
+                    $pickerButton = is_array($pickerButton) ? $pickerButton : [];
+                    $pickerButton = array_replace_recursive($pickerButton, $this->buttonOptions);
                 }
-                $label = ArrayHelper::remove($this->pickerButton, 'label', $this->pickerIcon);
-                if (!isset($this->pickerButton['disabled'])) {
-                    $this->pickerButton['disabled'] = $this->disabled;
+                if (!isset($pickerButton['disabled'])) {
+                    $pickerButton['disabled'] = $this->disabled;
                 }
-                if (empty($this->pickerButton['class'])) {
-                    $this->pickerButton['class'] = 'btn btn-' . ($isBs4 ? 'secondary' : 'default');
+                if (empty($pickerButton['class'])) {
+                    $pickerButton['class'] = 'btn btn-' . ($isBs4 ? 'secondary' : 'default');
                 }
                 if (empty($this->removeButton['class'])) {
                     $this->removeButton['class'] = 'btn btn-' . ($isBs4 ? 'secondary' : 'default');
                 }
-                $picker = $this->renderButton($this->pickerButton, 'picker', false);
+                $picker = $this->renderButton($pickerButton, 'picker', false);
                 $remove = $this->renderButton($this->removeButton, 'remove', false);
                 Html::addCssStyle($this->_container, 'display:block');
                 $out = strtr($this->layout, [
