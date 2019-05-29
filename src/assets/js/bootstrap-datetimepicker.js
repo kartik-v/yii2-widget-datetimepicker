@@ -97,7 +97,7 @@
 
         this.bootcssVer = options.bootcssVer || (this.isInput ? (this.element.is('.form-control') ? 3 : 2) : (this.bootcssVer = this.element.is('.input-group') ? 3 : 2));
 
-        this.component = this.element.is('.date') ? (this.bootcssVer === 3 ? this.element.find(".kv-datetime-picker").parent() :
+        this.component = this.element.is('.date') ? (this.bootcssVer === 3 ? this.element.find(".kv-datetime-picker") :
             this.element.find(".add-on .icon-th, .add-on .icon-time, .add-on .icon-calendar, .add-on .fa-calendar, .add-on .fa-clock-o").parent()) : false;
         this.componentReset = this.element.is('.date') ? (this.bootcssVer === 3 ? this.element.find('.kv-datetime-remove') : this.element.find('.add-on .icon-remove, .add-on .fa-times').parent()) : false;
         this.hasInput = this.component && this.element.find('input').length;

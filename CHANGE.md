@@ -1,6 +1,16 @@
 Change Log: `yii2-widget-datetimepicker`
 ========================================
 
+## Version 1.4.9
+
+**Date:** 29-May-2019
+
+- (enh #103): Improve layout for TYPE_BUTTON.
+- (enh #102): Update Portuguese Brazil Translations.
+- (bug #91): Enhance date time picker plugin for button type input update.
+- (enh #35): Allow picker button to be set as false for append/prepend.
+- Implement stale bot.
+
 ## Version 1.4.8
 
 **Date:** 09-Oct-2018
