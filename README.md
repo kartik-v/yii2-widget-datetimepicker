@@ -6,9 +6,9 @@
     yii2-widget-datetimepicker
     <hr>
     <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=DTP3NZQ6G2AYU"
-       title="Donate via Paypal" target="_blank"><img height="60" src="https://kartik-v.github.io/bootstrap-fileinput-samples/samples/donate.png" alt="Donate"/></a>
+       title="Donate via Paypal" target="_blank"><img height="90" src="https://kartik-v.github.io/bootstrap-fileinput-samples/samples/donate.png" alt="Donate"/></a>
     &nbsp; &nbsp; &nbsp;
-    <a href="https://www.buymeacoffee.com/kartikv" title="Buy me a coffee" ><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="60" alt="kartikv" /></a>
+    <a href="https://www.buymeacoffee.com/kartikv" title="Buy me a coffee" ><img align="top" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" align="top" height="50" alt="kartikv" style="margin-top:15px"/></a>
 </h1>
 
 <div align="center">
@@ -56,7 +56,7 @@ to the ```require``` section of your `composer.json` file.
 
 ## Demo
 
-You can refer detailed [documentation and demos](http://demos.krajee.com/widget-details/datetimepicker) on usage of the extension.
+You can refer detailed [documentation and demos](http://demos.krajee.com/widget-details/datetimepicker) and [API Documentation](https://docs.krajee.com/kartik-datetime-datetimepicker) on usage of the extension.
 
 ## Usage
 

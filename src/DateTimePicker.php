@@ -1,10 +1,10 @@
 <?php
 
 /**
- * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2021
+ * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2014 - 2022
  * @package yii2-widgets
  * @subpackage yii2-widget-datetimepicker
- * @version 1.5.0
+ * @version 1.5.1
  */
 
 namespace kartik\datetime;
@@ -20,6 +20,24 @@ use yii\helpers\Html;
 /**
  * DateTimePicker widget is a Yii2 wrapper for the Bootstrap DateTimePicker plugin by smalot. This is a fork of the
  * DatePicker plugin by @eternicode and adds the time functionality.
+ *
+ * For example,
+ *
+ * ```php
+ * use kartik\datetime\DateTimePicker;
+ *
+ * echo '<label>Start Date/Time</label>';
+ * echo DateTimePicker::widget([
+ *     'name' => 'datetime_10',
+ *     'options' => ['placeholder' => 'Select operating time ...'],
+ *     'convertFormat' => true,
+ *     'pluginOptions' => [
+ *         'format' => 'd-M-Y g:i A',
+ *         'startDate' => '01-Mar-2014 12:00 AM',
+ *         'todayHighlight' => true
+ *     ]
+ * ]);
+ * ```
  *
  * @author Kartik Visweswaran <kartikv2@gmail.com>
  * @since 1.0
@@ -78,12 +96,12 @@ class DateTimePicker extends InputWidget
     public $autoDefaultTimezone = true;
 
     /**
-     * Deprecated since v1.5.0
      * @var array the HTML attributes for the button that is rendered for [[TYPE_BUTTON]]. Defaults to
      * - `['class'=>'btn btn-default']` for [[bsVersion]] = '3.x', and
      * - `['class'=>'btn btn-secondary']` for [[bsVersion]] = '4.x'
      * The following special options are recognized:
      * - 'label': string the button label. Defaults to the [[pickerIcon]] setting.
+     * @deprecated since v1.5.0
      */
     public $buttonOptions = [];
 
@@ -187,7 +205,7 @@ class DateTimePicker extends InputWidget
         $this->initIcon('remove', 'remove', 'times');
         $s = DIRECTORY_SEPARATOR;
         $this->initI18N(__DIR__);
-        $this->setLanguage('bootstrap-datetimepicker.', __DIR__ . "{$s}assets{$s}", null, '.js');
+        $this->setLanguage('bootstrap-datetimepicker.', __DIR__ . "{$s}assets{$s}");
         $this->parseDateFormat('datetime');
         if (empty($this->_container['id'])) {
             $this->_container['id'] = $this->options['id'] . '-datetime';
@@ -351,7 +369,7 @@ class DateTimePicker extends InputWidget
             case self::TYPE_BUTTON:
                 Html::addCssClass($this->_container, ['date', $disabled]);
                 $pickerButton = $this->pickerButton;
-                if (!empty($this->buttonOptions)) { // buttonOptions is deprecated since v1.5.0
+                if (!empty($this->buttonOptions)) { // buttonOptions is deprecated since v1.5.1
                     $pickerButton = is_array($pickerButton) ? $pickerButton : [];
                     $pickerButton = array_replace_recursive($pickerButton, $this->buttonOptions);
                 }

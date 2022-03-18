@@ -1,6 +1,12 @@
 Change Log: `yii2-widget-datetimepicker`
 ========================================
 
+## Version 1.5.1
+
+**Date:** 18-Mar-2022
+
+- Updates for new bootstrap 5.x dependencies.
+
 ## Version 1.5.0
 
 **Date:** 28-Oct-2021
